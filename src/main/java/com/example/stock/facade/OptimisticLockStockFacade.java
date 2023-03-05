@@ -13,7 +13,7 @@ public class OptimisticLockStockFacade {
         this.optimisticLockStockService = optimisticLockStockService;
     }
 
-    @Transactional
+
     public void decrease(Long id, Long quantity) throws InterruptedException {
         while (true) {
             try {
